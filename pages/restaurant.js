@@ -7,7 +7,7 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchSeats() {
-      const res = await fetch('http://localhost:5000/restaurant');
+      const res = await fetch('tech0-gen-8-step3-app-py-3.azurewebsites.net/restaurant');
       const data = await res.json();
       setSeatsInfo(data);
     }

@@ -18,7 +18,7 @@ export default function RegisterPage() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://127.0.0.1:5000/register", formData);
+            const response = await axios.post("tech0-gen-8-step3-app-py-3.azurewebsites.net/register", formData);
             setMessage(response.data.message);
         } catch (error) {
             setMessage(error.response?.data?.message || "登録に失敗しました");
