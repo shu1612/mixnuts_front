@@ -13,8 +13,8 @@ export default function Home() {
 
     try {
       const url = genre
-        ? `tech0-gen-8-step3-app-py-3.azurewebsites.net/api/hotpepper/${genre}?query=${encodeURIComponent(query)}`
-        : `tech0-gen-8-step3-app-py-3.azurewebsites.net/api/hotpepper?query=${encodeURIComponent(query)}`;
+        ? `https://tech0-gen-8-step3-app-py-3.azurewebsites.net/api/hotpepper/${genre}?query=${encodeURIComponent(query)}`
+        : `https://tech0-gen-8-step3-app-py-3.azurewebsites.net/api/hotpepper?query=${encodeURIComponent(query)}`;
 
       const res = await fetch(url, { method: 'GET' });
 

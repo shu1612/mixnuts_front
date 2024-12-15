@@ -11,7 +11,7 @@ export default function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('tech0-gen-8-step3-app-py-3.azurewebsites.net/login', {
+            const response = await axios.post('https://tech0-gen-8-step3-app-py-3.azurewebsites.net/login', {
                 username,
                 password
             });
