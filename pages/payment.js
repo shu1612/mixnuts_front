@@ -20,7 +20,7 @@ export default function PaymentPage() {
   return (
     <div style={{ padding: "20px", maxWidth: "600px", margin: "0 auto", position: "relative" }}>
       <button
-        onClick={() => router.push("http://localhost:3000/")}
+        onClick={() => router.push("/")}
         style={{
           position: "absolute",
           top: "15px",

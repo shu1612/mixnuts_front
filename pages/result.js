@@ -21,7 +21,7 @@ export default function Result() {
   return (
     <div style={{ width: '100%', height: '100vh', position: 'relative', overflow: 'hidden' }}>
       <button
-        onClick={() => router.push('http://localhost:3000/')}
+        onClick={() => router.push('/')}
         style={{
           position: 'absolute',
           top: '15px',

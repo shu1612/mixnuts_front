@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div style={{ padding: '20px', fontFamily: 'Georgia, serif', backgroundColor: '#000', color: '#fff' }}>
       <button
-        onClick={() => router.push('http://localhost:3000/')}
+        onClick={() => router.push('/')}
         style={{
           position: 'absolute',
           top: '15px',
