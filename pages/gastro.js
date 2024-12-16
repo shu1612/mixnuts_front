@@ -141,6 +141,11 @@ export default function Home() {
       </form>
 
       {error && <p style={{ color: 'red', marginTop: '20px', fontSize: '1.25rem' }}>{error}</p>}
+    
+      {/* Logo at the bottom */}
+      <a href="http://webservice.recruit.co.jp/">
+                <img src="http://webservice.recruit.co.jp/banner/hotpepper-m.gif" alt="ホットペッパーグルメ Webサービス" width="88" height="35" border="0" title="ホットペッパーグルメ Webサービス" style={{ marginTop: "2rem" }} />
+            </a>
     </div>
   );
 }
