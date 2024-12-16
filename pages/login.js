@@ -35,7 +35,7 @@ export default function Login() {
             >
                 <input
                     type="text"
-                    placeholder="メールアドレス"
+                    placeholder="ユーザー名"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     required
