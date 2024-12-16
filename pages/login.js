@@ -1,26 +1,16 @@
 import { useState } from 'react';
-import axios from 'axios';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 
 export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const router = useRouter();
 
-    const handleLogin = async (e) => {
+    const handleLogin = (e) => {
         e.preventDefault();
-        try {
-            const response = await axios.post('https://tech0-gen-8-step3-app-py-3.azurewebsites.net/login', {
-                username,
-                password
-            });
-            localStorage.setItem('token', response.data.access_token);
-            router.push('/gastro');
-        } catch (error) {
-            console.error('Error logging in', error);
-            alert('ユーザー名かパスワードが相違しています');
-        }
+        // 擬態的に直接 /gastro へ遷移
+        console.log('擬似ログイン: ', { username, password });
+        router.push('/gastro');
     };
 
     return (
@@ -85,22 +75,22 @@ export default function Login() {
                 </button>
             </form>
             <button
-              onClick={() => router.push('/')}
-              style={{
-                width: '150px',
-                margin: '20px auto 0',
-                padding: "1rem",
-                backgroundColor: '#007BFF',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '5px',
-                fontSize: "1.5rem",
-                cursor: 'pointer',
-                display: 'block',
-              }}
-      >
-        戻る
-      </button>
+                onClick={() => router.push('/')}
+                style={{
+                    width: '150px',
+                    margin: '20px auto 0',
+                    padding: "1rem",
+                    backgroundColor: '#007BFF',
+                    color: '#fff',
+                    border: 'none',
+                    borderRadius: '5px',
+                    fontSize: "1.5rem",
+                    cursor: 'pointer',
+                    display: 'block',
+                }}
+            >
+                戻る
+            </button>
         </div>
     );
 }
